@@ -14,15 +14,17 @@ function buttonClick() {
 	trees.height = document.getElementById("height").value;
 	console.log("click");
 	console.log(trees);
+tree(trees);
 };
 
 // for loop with con inside. how to use con to get img
 
-function tree(){
-	for (var i = 0; i < trees.height; i= i +2)
-		console.log(trees.height);
+function tree(trees){
+
+	for (var i = 0; i < trees.height; i++)
+		
+		console.log(i);
 }
-tree();
 
 
 
