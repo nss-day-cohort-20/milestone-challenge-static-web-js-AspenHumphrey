@@ -22,8 +22,7 @@ tree(trees);
 function tree(trees){
 
 	for (var i = 0; i < trees.height; i++)
-		
-		console.log(i);
+		console.log(" ".repeat(trees.height-i+1) + trees.style.repeat(2*i+1) );
 }
 
 
