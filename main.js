@@ -1,18 +1,27 @@
 //identify button var with html by id
 var button = document.getElementById("grow");
-
 //tell JS to wait for click
 button.addEventListener("click", checkInput);
 
-// establishing var on html by id
-var style = document.getElementById("style");
-var height = document.getElementById("height");
 
 // defining trees with user input with empty ""
 var trees = {
 	height: "",
 	style: ""
 };
+// EL on the input and when it meets the condition it runs the same function as your button EL. 
+// That way you keep single responsibility intact while expanding the 
+// functionality of your program.
+
+var style = document.getElementById("style");
+// style input EL on enter
+style.addEventListener("keyup", function(event){
+    if (event.key === "Enter"){
+    console.log("tree");
+    }
+    buttonClick();
+});
+
 
 // checking if users input values into spaces
 function checkInput(){
@@ -46,7 +55,6 @@ function tree(trees){
 	for (var i = 0; i < trees.height; i++)
 		// con logging tree
 		console.log(" ".repeat(trees.height-i+1) + trees.style.repeat(2*i+1) );
-}
-
+};
 
 
